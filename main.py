@@ -5,7 +5,8 @@ from crud.CRUDPedido import CRUDPedido
 from crud.CRUDAntibiotico import CRUDAntibiotico
 from crud.CRUDProductoControl import CRUDProductoControl
 
-if __name__ == '__main__':
+
+def main():
     crud_cliente = CRUDCliente()
     crud_pedido = CRUDPedido()
     crud_antibiotico = CRUDAntibiotico()
@@ -73,3 +74,7 @@ if __name__ == '__main__':
         if (opcion == 3):
             mensajes.mensaje_salida()
             break
+
+
+if __name__ == '__main__':
+    main()
