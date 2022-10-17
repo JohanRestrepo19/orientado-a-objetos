@@ -13,16 +13,18 @@ def mensaje_entrada():
     print('''
     ----------------------------------------------------------
     Bienvenido al sistema de venta de productos de control.
-    ----------------------------------------------------------
-    ''')
+    ----------------------------------------------------------''')
 
 
 def menu_principal():
     print('''
+    ========================================================
+                        MENU PRINCIPAL
+    ========================================================
+
     1. Vender un producto.
     2. Mostrar facturas de productos vendidos.
-    3. Salir.
-    ''')
+    3. Salir.''')
 
     opcion = int(input('''
     Ingrese la opcion deseada:
@@ -33,9 +35,11 @@ def menu_principal():
 
 def menu_productos():
     print('''
+    ========================================================
+                        MENU PRODUCTOS
+    ========================================================
     1. Antibiotico
-    2. Producto Control
-    ''')
+    2. Producto Control''')
     opcion = int(input('''
     Ingrese el tipo de producto que desea
     '''))
@@ -44,6 +48,11 @@ def menu_productos():
 
 
 def listado_productos(lista_prods):
+    print('''
+    ========================================================
+                        LISTADO PRODUCTOS
+    ========================================================''')
+
     for index, producto in enumerate(lista_prods):
         print(f'''
         index: {index}
@@ -57,6 +66,10 @@ def listado_productos(lista_prods):
 
 
 def listado_pedidos(lista_pedidos):
+    print('''
+    ========================================================
+                        LISTADO PEDIDOS
+    ========================================================''')
     for pedido in lista_pedidos:
         print(pedido)
 
@@ -68,5 +81,4 @@ def mensaje_salida():
     print('''
     -------------------------------------------------------------
     Gracias por usar el sistema de venta de productos de control.
-    -------------------------------------------------------------
-    ''')
+    -------------------------------------------------------------''')

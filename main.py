@@ -12,7 +12,7 @@ def main():
     crud_antibiotico = CRUDAntibiotico()
     crud_prod_control = CRUDProductoControl()
 
-    cliente = crud_cliente.crear(nombre='Monachito', cedula='1234567890'),
+    cliente = crud_cliente.crear(nombre='Monachito', cedula='1234567890')
 
     base_pedidos = []
     base_antibioticos = [
