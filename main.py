@@ -12,7 +12,7 @@ def main():
     crud_antibiotico = CRUDAntibiotico()
     crud_prod_control = CRUDProductoControl()
 
-    cliente = crud_cliente.crear(nombre='Monachito', cedula='1234567890')
+    _ = crud_cliente.crear(nombre='Monachito', cedula='1234567890')
 
     base_pedidos = []
     base_antibioticos = [
@@ -50,6 +50,8 @@ def main():
         if (opcion == 1):
             opcion_producto = mensajes.menu_productos()
             fecha_pedido = datetime.now()
+            pedido = None
+
             if (opcion_producto == 1):
                 index_prod = mensajes.listado_productos(base_antibioticos)
                 prod = base_antibioticos[index_prod]
@@ -60,8 +62,11 @@ def main():
             if (opcion_producto == 2):
                 index_prod = mensajes.listado_productos(base_prods_control)
                 prod = base_prods_control[index_prod]
+
                 pedido = crud_pedido.crear(
-                    fecha=fecha_pedido, total_compra=prod.valor, producto=prod
+                    fecha=fecha_pedido,
+                    total_compra=prod.valor,
+                    producto=prod
                 )
 
             base_pedidos.append(pedido)

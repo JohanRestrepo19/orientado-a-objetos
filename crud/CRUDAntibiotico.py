@@ -11,5 +11,5 @@ class CRUDAntibiotico(ICrud):
             kwargs['precio']
         )
 
-    def mostrar(self, **kwargs):
+    def mostrar(self, _):
         pass
